@@ -1,0 +1,274 @@
+---
+title: "Final Project"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Project requirements:
+
+-   A brief write-up that includes the below requirements and, in general, introduces your investigation and summarizes your findings. This should be at least three full pages, including text and reasonably-sized tables and figures, and may will need to be a bit longer. More than 8 pages is probably too much – this should be a compact report.
+
+-   Make sure you appropriately cite the data, including the name of the organization/source, the name of the dataset, and the URL(s) for the source of the data.
+
+Include descriptions of the dataset(s) as a whole, including:
+
+-   The subjects/topics the dataset(s) cover (what can we learn from these data?),
+
+-   Unit of observation (what does each row of the dataset represent? E.g, in a survey, each survey respondent is the unit of observation),
+
+-   Number of observations,
+
+-   Number of variables (columns, i.e., what is being measured for each row/unit of observation),
+
+-   A list of the most important variables, and
+
+-   A description of any issues with missing data or challenges with the dataset’s structure (is it time series data? Multi-level/hierarchical data? Text?), or issues with using the data documentation (is the codebook very complex/hard to use?).
+
+-   Select 3-6 variables (columns from the datasets) that are most central to your topic. For these variables:
+
+-   Describe the variable, why it is important, and provide any context needed to interpret the variable.
+
+    -   If you see the variables as related to one another, why is this set of variables collectively worthy of study?
+
+Create an attractive presentation of descriptive statistics **or** visualizations that provide some **initial insights** from these data. Interpret these initial results (provide one or two insights that follow from each).
+
+-   You don’t need to go overboard. Demonstrate for the 3-6 variables that you can work with the data to generate tabular or visual results that summarize the data.
+
+-   Descriptive statistics would include standard summary statistics like mean, median, interquartile range, and standard deviation. For categorical variables, frequency tables may be helpful. Make sure these are presented in an attractive table, **not as raw code output.**
+
+-   Useful visualizations could include simple univariate visualizations like boxplot or histograms. Be sure that **the figures are inserted into the document in an attractive, professional way,** with appropriate titles, scales, legends, and axis labels.
+
+<!-- -->
+
+-   If you wish to display any more complex statistical results, like a linear regression model or multivariate visualizations, you may do so, but be careful not to misconstrue the results of more complex methods.
+
+Post your R project to a **public** GitHub repository and include a link to your repo in your Quarto document.\
+The repository should have all the files needed to replicate the project, and a README file that introduces your project.
+
+-   The instructor should be able to replicate all aspects of the project by accessing your repo, cloning it, and running your .qmd file.
+
+-   There is a premium placed for this assignment on replicability and clean, well-presented results. This should look like a carefully assembled short report that would be suitable to share outside your organization, as a demonstration that you can work with publicly available quantitative data using R or Python, using Quarto as a reproducible format.
+
+<div>
+
+</div>
+
+## Background
+
+The San Francisco city government is looking to complete an analysis of COVID testing data from 2020 to 2025 for historical records.
+
+COVID-19 lab testing data, which records the daily number of tests reported and breaks them down into positive, negative, and indeterminate results. While all reported tests are counted—whether positive, negative, or indeterminate. Testing is performed by commercial, clinical, and hospital laboratories, as well as by the SFDPH Public Health Laboratory. To prevent duplication, tests are logged by individual and by specimen collection date: if someone is tested on multiple dates over the past 30 days, each test appears separately in the dataset. Please note that the total number of positive test results does not correspond directly to the total number of confirmed COVID-19 cases in San Francisco. This analysis also includes data on COVID-19 vaccinations given to SF residents by over time are no longer being updated. This data is data updated through 10/31/2023 and does not include any new data after this date.
+
+**Citation:**\
+\
+“City of San Francisco - COVID-19 Testing over Time.” Catalog, May 10, 2025. https://catalog.data.gov/dataset/covid-19-tests.
+
+“City of San Francisco - Archived: Covid-19 Vaccinations given to SF Residents over Time.” Catalog, March 29, 2025. https://catalog.data.gov/dataset/covid-19-vaccinations-given-to-sf-residents-over-time.
+
+## Descriptive Information
+
+**Variables in Analysis**
+
+Table 1.
+
+| Variable | Definition |
+|----------------------------------|--------------------------------------|
+| DATE | Date of COVID test |
+| tests | Number of tests administered on that date |
+| pos | COVID positive |
+| neg | COVID negative |
+| indet | Indeterminate result |
+| cumulative_tests | Cumulative COIVD tests administered |
+| cumulative_positive_tests | Cumulative tests of COVID positive results |
+| cumulative_negative_tests | Cumulative tests of COVID negative results |
+| cumulative_indet_tests | Cumulative tests which rendered an indeterminate results |
+
+Table 2.
+
+| Variable             | Definition                      |
+|----------------------|---------------------------------|
+| date\_\_administered | Date of vaccine administered    |
+| vaccines             | Number of vaccines administered |
+
+**Unit of analysis**: The unit of observation is Day (daily totals) as each test result and aggregate corresponds to a date
+
+**Notes:** There are two columns in a data set for testing that is still being read. There are no data points in these columns and does not affect the results the analysis. Cumulative variables were not used in the analysis but was left in the data set for reference.
+
+## Analysis
+
+**Number of observations and variables**
+
+```{r}
+library(readr)
+covid <- read.csv("COVID-19_Testing_Over_Time.csv")
+head(covid)
+nrow(covid)
+n_obs <- nrow(covid)
+n_obs #The number of Observations
+
+n_var <- ncol(covid)
+n_var # The number of variables
+
+```
+
+## 
+
+**Summary Statistics**
+
+```{r}
+
+summary(covid)
+```
+
+Table 3.
+
+|           |           |     |         |         |         |         |         |
+|-----------|-----------|-----|---------|---------|---------|---------|---------|
+| Variable  | Type      | Min | 1st Qu. | Median  | Mean    | 3rd Qu. | Max     |
+| DATE      | character | \-  | \-      | \-      | \-      | \-      | \-      |
+| tests     | numeric   | 2   | 663     | 1712    | 2862    | 4536    | 20545   |
+| pos       | numeric   | 0   | 26      | 59      | 146.6   | 134     | 3864    |
+| neg       | numeric   | 2   | 631     | 1631    | 2711    | 4286    | 16556   |
+| indet     | numeric   | 0   | 0       | 1       | 5.188   | 5       | 181     |
+| cum_test  | numeric   | 2   | 2064049 | 4531919 | 3600333 | 5088832 | 5412621 |
+| cum_pos_t | numeric   | 0   | 46888   | 230341  | 170257  | 267079  | 277188  |
+| cum_neg_t | numeric   | 2   | 2014474 | 4292335 | 3423434 | 4811953 | 5125623 |
+| cum_in_t  | numeric   | 0   | 2688    | 9243    | 6642    | 9801    | 9810    |
+
+```{r}
+
+library(dplyr)      # for data‐wrangling verbs
+library(lubridate)  # for mdy() and year()
+library(tidyverse)
+
+head(covid)
+
+covid2 <- covid %>%
+  # 1) parse DATE and extract year
+  mutate(
+    DATE = mdy(DATE),      # instead of mdy(covid$DATE)
+    Year = year(DATE)      # instead of year(covid$DATE)
+  ) %>%
+  # 2) group by your new Year column
+  group_by(Year) %>%
+  # 3) summarise however you like
+  summarise(
+    days        = n(),
+    total_tests = sum(tests, na.rm = TRUE),
+    pos_tests   = sum(pos,   na.rm = TRUE),
+    neg_tests   = sum(neg,   na.rm = TRUE),
+    neg_tests   = sum(neg,   na.rm = TRUE),
+    indet_tests = sum(indet, na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(Year)
+
+head(covid2)
+
+library(ggplot2)
+
+ggplot(covid2, aes(x = Year, y = total_tests))+
+  geom_col(fill = "blue")+
+  labs(title = "Total Covid Test by year", x = "Years", y = "Total tests")+
+  theme_minimal()+
+  scale_x_continuous(
+    breaks = 2020:2025,  # Show all years
+    labels = 2020:2025   # Label as integers
+  )
+
+ggplot(covid2, aes(x = Year, y = pos_tests))+
+  geom_col(fill = "red")+
+  labs(title = "Positive Covid Test by year", x = "Years", y = "Positive tests")+
+  theme_minimal()+
+  scale_x_continuous(
+    breaks = 2020:2025,  # Show all years
+    labels = 2020:2025   # Label as integers
+  )
+
+ggplot(covid2, aes(x = Year, y = neg_tests))+
+  geom_col(fill = "orange")+
+  labs(title = "Negative Covid Test by year", x = "Years", y = "Negative tests")+
+  theme_minimal()+
+  scale_x_continuous(
+    breaks = 2020:2025,  # Show all years
+    labels = 2020:2025   # Label as integers
+  )
+
+ggplot(covid2, aes(x = Year, y = indet_tests))+
+  geom_col(fill = "black")+
+  labs(title = "Indeterminate Covid Test by year", x = "Years", y = "Indeterminate tests")+
+  theme_minimal()+
+  scale_x_continuous(
+    breaks = 2020:2025,  # Show all years
+    labels = 2020:2025   # Label as integers
+  )
+
+
+```
+
+By 2021, San Francisco’s cumulative COVID-19 tests exceeded two million as testing capacity expanded. Our annual bar charts decompose those tests into positive, negative, and indeterminate results. After the vaccine received emergency-use authorization in December 2020, negative test results rose sharply in 2021—nearly matching the total tests performed that year. As vaccination rates climbed nationally from 2023 onward and case counts fell, overall testing volumes declined through 2025. Throughout this period, the proportion of negative tests remained consistently high, reflecting both wider vaccine coverage and reduced community transmission.
+
+**Comparison of vaccines to test results:**
+
+```{r}
+library(readr)
+vaccine <- read.csv("ARCHIVED__COVID-19_Vaccinations_Given_to_SF_Residents_Over_Time_v1.csv")
+
+vaccine_df2 <- vaccine %>%
+  # 1) parse DATE and extract year
+  mutate(
+    DATE = mdy(date_administered),      # instead of mdy(covid$DATE)
+    Year = year(DATE)      # instead of year(covid$DATE)
+  ) %>%
+  # 2) group by your new Year column
+  group_by(Year) %>%
+  # 3) summarise however you like
+  summarise(
+    days        = n_distinct(DATE),
+    total_vaccines = sum(vaccines, na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(Year)
+
+
+vaccine_df2
+
+combined_covid <- left_join(covid2, vaccine_df2, by = "Year")
+
+combined_covid
+
+plot_data <- combined_covid %>%
+  select(Year, pos_tests, neg_tests, total_vaccines) %>%
+  pivot_longer(cols = -Year, names_to = "Metric", values_to = "Count")
+
+
+ggplot(plot_data, aes(x = Year, y = Count, fill = Metric ))+
+   geom_bar(stat = "identity", position = "dodge") +
+  labs(
+    title = "COVID-19 Test Outcomes and Vaccines by Year",
+    x = "Year",
+    y = "Count",
+    fill = "Metric"
+  ) +
+  theme_minimal() +
+  scale_x_continuous(
+    breaks = 2020:2023,  
+    labels = 2020:2023  
+  )
+  theme(
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    axis.text = element_text(size = 12),
+    axis.title = element_text(size = 14)
+  )
+
+```
+
+The graph above shows as the number of people vaccinated increased the number of positive cases decreased. As noted previously this is not reflective off all COVID cases but only in respect to those tested.
+
+## Conclusions
+
+The spike in negative results after vaccine rollout, and the subsequent overall decline in testing from 2023 onward, directly illustrates how immunization drives down both infection rates and demand for testing. Seeing tests peak in 2021—when capacity was ramped up—helps authorities plan for future surges.
+
+## GitHub Link
