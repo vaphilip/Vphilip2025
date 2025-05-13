@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Final Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Final Project PS4_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Final Project PS4_files/libs/quarto-html/quarto.js"></script>
+<script src="Final Project PS4_files/libs/quarto-html/popper.min.js"></script>
+<script src="Final Project PS4_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Final Project PS4_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Final Project PS4_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Final Project PS4_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Final Project PS4_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Final Project PS4_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Final Project PS4_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Project requirements:</p>
+<ul>
+<li><p>A brief write-up that includes the below requirements and, in general, introduces your investigation and summarizes your findings. This should be at least three&nbsp;full pages, including text and reasonably-sized tables and figures, and may will need to be a bit longer. More than 8 pages is probably too much – this should be a compact report.</p></li>
+<li><p>Make sure you appropriately cite the data, including the name of the organization/source, the name of the dataset, and the URL(s) for the source of the data.</p></li>
+</ul>
+<p>Include descriptions of the dataset(s) as a whole, including:</p>
+<ul>
+<li><p>The subjects/topics the dataset(s) cover (what can we learn from these data?),</p></li>
+<li><p>Unit of observation (what does each row of the dataset represent? E.g, in a survey, each survey respondent is the unit of observation),</p></li>
+<li><p>Number of observations,</p></li>
+<li><p>Number of variables (columns, i.e., what is being measured for each row/unit of observation),</p></li>
+<li><p>A list of the most important variables, and</p></li>
+<li><p>A description of any issues with missing data or challenges with the dataset’s structure (is it time series data? Multi-level/hierarchical data? Text?), or issues with using the data documentation (is the codebook very complex/hard to use?).</p></li>
+<li><p>Select 3-6 variables (columns from the datasets) that are most central to your topic. For these variables:</p></li>
+<li><p>Describe the variable, why it is important, and provide any context needed to interpret the variable.</p>
+<ul>
+<li>If you see the variables as related to one another, why is this set of variables collectively worthy of study?</li>
+</ul></li>
+</ul>
+<p>Create an attractive presentation of descriptive statistics <strong>or</strong> visualizations that provide some <strong>initial insights</strong> from these data. Interpret these initial results (provide one or two insights that follow from each).</p>
+<ul>
+<li><p>You don’t need to go overboard. Demonstrate for the 3-6 variables that you can work with the data to generate tabular or visual results that summarize the data.</p></li>
+<li><p>Descriptive statistics would include standard summary statistics like mean, median, interquartile range, and standard deviation. For categorical variables, frequency tables may be helpful. Make sure these are presented in an attractive table, <strong>not as raw code output.</strong></p></li>
+<li><p>Useful visualizations could include simple univariate visualizations like boxplot or histograms. Be sure that <strong>the figures are inserted into the document in an attractive, professional way,</strong> with appropriate titles, scales, legends, and axis labels.</p></li>
+</ul>
+<!-- -->
+<ul>
+<li>If you wish to display any more complex statistical results, like a linear regression model or multivariate visualizations, you may do so, but be careful not to misconstrue the results of more complex methods.</li>
+</ul>
+<p>Post your R project to a <strong>public</strong> GitHub repository and include a link to your repo in your Quarto document.<br>
+The repository should have all the files needed to replicate the project, and a README file that introduces your project.</p>
+<ul>
+<li><p>The instructor should be able to replicate all aspects of the project by accessing your repo, cloning it, and running your .qmd file.</p></li>
+<li><p>There is a premium placed for this assignment on replicability and clean, well-presented results. This should look like a carefully assembled short report that would be suitable to share outside your organization, as a demonstration that you can work with publicly available quantitative data using R or Python, using Quarto as a reproducible format.</p></li>
+</ul>
+<div>
+
+</div>
+</section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>The San Francisco city government is looking to complete an analysis of COVID testing data from 2020 to 2025 for historical records.</p>
+<p>COVID-19 lab testing data, which records the daily number of tests reported and breaks them down into positive, negative, and indeterminate results. While all reported tests are counted—whether positive, negative, or indeterminate. Testing is performed by commercial, clinical, and hospital laboratories, as well as by the SFDPH Public Health Laboratory. To prevent duplication, tests are logged by individual and by specimen collection date: if someone is tested on multiple dates over the past 30 days, each test appears separately in the dataset. Please note that the total number of positive test results does not correspond directly to the total number of confirmed COVID-19 cases in San Francisco. This analysis also includes data on COVID-19 vaccinations given to SF residents by over time are no longer being updated. This data is data updated through 10/31/2023 and does not include any new data after this date.</p>
+<p><strong>Citation:</strong><br>
+<br>
+“City of San Francisco - COVID-19 Testing over Time.” Catalog, May 10, 2025. https://catalog.data.gov/dataset/covid-19-tests.</p>
+<p>“City of San Francisco - Archived: Covid-19 Vaccinations given to SF Residents over Time.” Catalog, March 29, 2025. https://catalog.data.gov/dataset/covid-19-vaccinations-given-to-sf-residents-over-time.</p>
+</section>
+<section id="descriptive-information" class="level2">
+<h2 class="anchored" data-anchor-id="descriptive-information">Descriptive Information</h2>
+<p><strong>Variables in Analysis</strong></p>
+<p>Table 1.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DATE</td>
+<td>Date of COVID test</td>
+</tr>
+<tr class="even">
+<td>tests</td>
+<td>Number of tests administered on that date</td>
+</tr>
+<tr class="odd">
+<td>pos</td>
+<td>COVID positive</td>
+</tr>
+<tr class="even">
+<td>neg</td>
+<td>COVID negative</td>
+</tr>
+<tr class="odd">
+<td>indet</td>
+<td>Indeterminate result</td>
+</tr>
+<tr class="even">
+<td>cumulative_tests</td>
+<td>Cumulative COIVD tests administered</td>
+</tr>
+<tr class="odd">
+<td>cumulative_positive_tests</td>
+<td>Cumulative tests of COVID positive results</td>
+</tr>
+<tr class="even">
+<td>cumulative_negative_tests</td>
+<td>Cumulative tests of COVID negative results</td>
+</tr>
+<tr class="odd">
+<td>cumulative_indet_tests</td>
+<td>Cumulative tests which rendered an indeterminate results</td>
+</tr>
+</tbody>
+</table>
+<p>Table 2.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>date__administered</td>
+<td>Date of vaccine administered</td>
+</tr>
+<tr class="even">
+<td>vaccines</td>
+<td>Number of vaccines administered</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Unit of analysis</strong>: The unit of observation is Day (daily totals) as each test result and aggregate corresponds to a date</p>
+<p><strong>Notes:</strong> There are two columns in a data set for testing that is still being read. There are no data points in these columns and does not affect the results the analysis. Cumulative variables were not used in the analysis but was left in the data set for reference.</p>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p><strong>Number of observations and variables</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>covid <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"COVID-19_Testing_Over_Time.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(covid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      DATE tests pos neg indet cum_test cum_pos_t cum_neg_t cum_in_t
+1 3/1/2020     2   0   2     0        2         0         2        0
+2 3/2/2020     2   0   2     0        4         0         4        0
+3 3/3/2020     8   2   6     0       12         2        10        0
+4 3/4/2020    12   0  12     0       24         2        22        0
+5 3/5/2020    23   6  17     0       47         8        39        0
+6 3/6/2020    21   1  20     0       68         9        59        0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(covid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1891</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="fu">nrow</span>(covid)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>n_obs <span class="co">#The number of Observations</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1891</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>n_var <span class="ot">&lt;-</span> <span class="fu">ncol</span>(covid)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>n_var <span class="co"># The number of variables</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 9</code></pre>
+</div>
+</div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+<p><strong>Summary Statistics</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(covid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     DATE               tests            pos              neg       
+ Length:1891        Min.   :    2   Min.   :   0.0   Min.   :    2  
+ Class :character   1st Qu.:  663   1st Qu.:  26.0   1st Qu.:  631  
+ Mode  :character   Median : 1712   Median :  59.0   Median : 1631  
+                    Mean   : 2862   Mean   : 146.6   Mean   : 2711  
+                    3rd Qu.: 4536   3rd Qu.: 134.0   3rd Qu.: 4286  
+                    Max.   :20545   Max.   :3864.0   Max.   :16556  
+     indet            cum_test         cum_pos_t        cum_neg_t      
+ Min.   :  0.000   Min.   :      2   Min.   :     0   Min.   :      2  
+ 1st Qu.:  0.000   1st Qu.:2064049   1st Qu.: 46888   1st Qu.:2014474  
+ Median :  1.000   Median :4531919   Median :230341   Median :4292335  
+ Mean   :  5.188   Mean   :3600333   Mean   :170257   Mean   :3423434  
+ 3rd Qu.:  5.000   3rd Qu.:5088832   3rd Qu.:267079   3rd Qu.:4811953  
+ Max.   :181.000   Max.   :5412621   Max.   :277188   Max.   :5125623  
+    cum_in_t   
+ Min.   :   0  
+ 1st Qu.:2688  
+ Median :9243  
+ Mean   :6642  
+ 3rd Qu.:9801  
+ Max.   :9810  </code></pre>
+</div>
+</div>
+<p>Table 3.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 6%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Variable</td>
+<td>Type</td>
+<td>Min</td>
+<td>1st Qu.</td>
+<td>Median</td>
+<td>Mean</td>
+<td>3rd Qu.</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td>DATE</td>
+<td>character</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>tests</td>
+<td>numeric</td>
+<td>2</td>
+<td>663</td>
+<td>1712</td>
+<td>2862</td>
+<td>4536</td>
+<td>20545</td>
+</tr>
+<tr class="even">
+<td>pos</td>
+<td>numeric</td>
+<td>0</td>
+<td>26</td>
+<td>59</td>
+<td>146.6</td>
+<td>134</td>
+<td>3864</td>
+</tr>
+<tr class="odd">
+<td>neg</td>
+<td>numeric</td>
+<td>2</td>
+<td>631</td>
+<td>1631</td>
+<td>2711</td>
+<td>4286</td>
+<td>16556</td>
+</tr>
+<tr class="even">
+<td>indet</td>
+<td>numeric</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>5.188</td>
+<td>5</td>
+<td>181</td>
+</tr>
+<tr class="odd">
+<td>cum_test</td>
+<td>numeric</td>
+<td>2</td>
+<td>2064049</td>
+<td>4531919</td>
+<td>3600333</td>
+<td>5088832</td>
+<td>5412621</td>
+</tr>
+<tr class="even">
+<td>cum_pos_t</td>
+<td>numeric</td>
+<td>0</td>
+<td>46888</td>
+<td>230341</td>
+<td>170257</td>
+<td>267079</td>
+<td>277188</td>
+</tr>
+<tr class="odd">
+<td>cum_neg_t</td>
+<td>numeric</td>
+<td>2</td>
+<td>2014474</td>
+<td>4292335</td>
+<td>3423434</td>
+<td>4811953</td>
+<td>5125623</td>
+</tr>
+<tr class="even">
+<td>cum_in_t</td>
+<td>numeric</td>
+<td>0</td>
+<td>2688</td>
+<td>9243</td>
+<td>6642</td>
+<td>9801</td>
+<td>9810</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)      <span class="co"># for data‐wrangling verbs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'dplyr' was built under R version 4.4.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)  <span class="co"># for mdy() and year()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'lubridate'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ forcats 1.0.0     ✔ stringr 1.5.1
+✔ ggplot2 3.5.1     ✔ tibble  3.2.1
+✔ purrr   1.0.2     ✔ tidyr   1.3.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(covid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      DATE tests pos neg indet cum_test cum_pos_t cum_neg_t cum_in_t
+1 3/1/2020     2   0   2     0        2         0         2        0
+2 3/2/2020     2   0   2     0        4         0         4        0
+3 3/3/2020     8   2   6     0       12         2        10        0
+4 3/4/2020    12   0  12     0       24         2        22        0
+5 3/5/2020    23   6  17     0       47         8        39        0
+6 3/6/2020    21   1  20     0       68         9        59        0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>covid2 <span class="ot">&lt;-</span> covid <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 1) parse DATE and extract year</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">DATE =</span> <span class="fu">mdy</span>(DATE),      <span class="co"># instead of mdy(covid$DATE)</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Year =</span> <span class="fu">year</span>(DATE)      <span class="co"># instead of year(covid$DATE)</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 2) group by your new Year column</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 3) summarise however you like</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">days        =</span> <span class="fu">n</span>(),</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_tests =</span> <span class="fu">sum</span>(tests, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pos_tests   =</span> <span class="fu">sum</span>(pos,   <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">neg_tests   =</span> <span class="fu">sum</span>(neg,   <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">neg_tests   =</span> <span class="fu">sum</span>(neg,   <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">indet_tests =</span> <span class="fu">sum</span>(indet, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Year)</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(covid2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+   Year  days total_tests pos_tests neg_tests indet_tests
+  &lt;dbl&gt; &lt;int&gt;       &lt;int&gt;     &lt;int&gt;     &lt;int&gt;       &lt;int&gt;
+1  2020   306     1166394     30797   1133748        1849
+2  2021   365     2012412     59136   1951107        2169
+3  2022   365     1527239    154778   1366943        5518
+4  2023   365      365636     21162    344209         265
+5  2024   366      278732     10089    268634           9
+6  2025   124       62208      1226     60982           0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(covid2, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> total_tests))<span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Total Covid Test by year"</span>, <span class="at">x =</span> <span class="st">"Years"</span>, <span class="at">y =</span> <span class="st">"Total tests"</span>)<span class="sc">+</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>,  <span class="co"># Show all years</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>   <span class="co"># Label as integers</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final-Project-PS4_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(covid2, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> pos_tests))<span class="sc">+</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"red"</span>)<span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Positive Covid Test by year"</span>, <span class="at">x =</span> <span class="st">"Years"</span>, <span class="at">y =</span> <span class="st">"Positive tests"</span>)<span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>,  <span class="co"># Show all years</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>   <span class="co"># Label as integers</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final-Project-PS4_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(covid2, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> neg_tests))<span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"orange"</span>)<span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Negative Covid Test by year"</span>, <span class="at">x =</span> <span class="st">"Years"</span>, <span class="at">y =</span> <span class="st">"Negative tests"</span>)<span class="sc">+</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>,  <span class="co"># Show all years</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>   <span class="co"># Label as integers</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final-Project-PS4_files/figure-html/unnamed-chunk-3-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(covid2, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> indet_tests))<span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Indeterminate Covid Test by year"</span>, <span class="at">x =</span> <span class="st">"Years"</span>, <span class="at">y =</span> <span class="st">"Indeterminate tests"</span>)<span class="sc">+</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>,  <span class="co"># Show all years</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2025</span>   <span class="co"># Label as integers</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final-Project-PS4_files/figure-html/unnamed-chunk-3-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>By 2021, San Francisco’s cumulative COVID-19 tests exceeded two million as testing capacity expanded. Our annual bar charts decompose those tests into positive, negative, and indeterminate results. After the vaccine received emergency-use authorization in December 2020, negative test results rose sharply in 2021—nearly matching the total tests performed that year. As vaccination rates climbed nationally from 2023 onward and case counts fell, overall testing volumes declined through 2025. Throughout this period, the proportion of negative tests remained consistently high, reflecting both wider vaccine coverage and reduced community transmission.</p>
+<p><strong>Comparison of vaccines to test results:</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>vaccine <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"ARCHIVED__COVID-19_Vaccinations_Given_to_SF_Residents_Over_Time_v1.csv"</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>vaccine_df2 <span class="ot">&lt;-</span> vaccine <span class="sc">%&gt;%</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 1) parse DATE and extract year</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">DATE =</span> <span class="fu">mdy</span>(date_administered),      <span class="co"># instead of mdy(covid$DATE)</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Year =</span> <span class="fu">year</span>(DATE)      <span class="co"># instead of year(covid$DATE)</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 2) group by your new Year column</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Year) <span class="sc">%&gt;%</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 3) summarise however you like</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">days        =</span> <span class="fu">n_distinct</span>(DATE),</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_vaccines =</span> <span class="fu">sum</span>(vaccines, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Year)</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>vaccine_df2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+   Year  days total_vaccines
+  &lt;dbl&gt; &lt;int&gt;          &lt;int&gt;
+1  2020    21          16123
+2  2021   365        1634643
+3  2022   365         106393
+4  2023   304           6246</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>combined_covid <span class="ot">&lt;-</span> <span class="fu">left_join</span>(covid2, vaccine_df2, <span class="at">by =</span> <span class="st">"Year"</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>combined_covid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 8
+   Year days.x total_tests pos_tests neg_tests indet_tests days.y total_vaccines
+  &lt;dbl&gt;  &lt;int&gt;       &lt;int&gt;     &lt;int&gt;     &lt;int&gt;       &lt;int&gt;  &lt;int&gt;          &lt;int&gt;
+1  2020    306     1166394     30797   1133748        1849     21          16123
+2  2021    365     2012412     59136   1951107        2169    365        1634643
+3  2022    365     1527239    154778   1366943        5518    365         106393
+4  2023    365      365636     21162    344209         265    304           6246
+5  2024    366      278732     10089    268634           9     NA             NA
+6  2025    124       62208      1226     60982           0     NA             NA</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plot_data <span class="ot">&lt;-</span> combined_covid <span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Year, pos_tests, neg_tests, total_vaccines) <span class="sc">%&gt;%</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Year, <span class="at">names_to =</span> <span class="st">"Metric"</span>, <span class="at">values_to =</span> <span class="st">"Count"</span>)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_data, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Count, <span class="at">fill =</span> Metric ))<span class="sc">+</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"COVID-19 Test Outcomes and Vaccines by Year"</span>,</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Count"</span>,</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Metric"</span></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2023</span>,  </span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="dv">2020</span><span class="sc">:</span><span class="dv">2023</span>  </span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Final-Project-PS4_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 3
+ $ axis.title:List of 11
+  ..$ family       : NULL
+  ..$ face         : NULL
+  ..$ colour       : NULL
+  ..$ size         : num 14
+  ..$ hjust        : NULL
+  ..$ vjust        : NULL
+  ..$ angle        : NULL
+  ..$ lineheight   : NULL
+  ..$ margin       : NULL
+  ..$ debug        : NULL
+  ..$ inherit.blank: logi FALSE
+  ..- attr(*, "class")= chr [1:2] "element_text" "element"
+ $ axis.text :List of 11
+  ..$ family       : NULL
+  ..$ face         : NULL
+  ..$ colour       : NULL
+  ..$ size         : num 12
+  ..$ hjust        : NULL
+  ..$ vjust        : NULL
+  ..$ angle        : NULL
+  ..$ lineheight   : NULL
+  ..$ margin       : NULL
+  ..$ debug        : NULL
+  ..$ inherit.blank: logi FALSE
+  ..- attr(*, "class")= chr [1:2] "element_text" "element"
+ $ plot.title:List of 11
+  ..$ family       : NULL
+  ..$ face         : chr "bold"
+  ..$ colour       : NULL
+  ..$ size         : num 16
+  ..$ hjust        : num 0.5
+  ..$ vjust        : NULL
+  ..$ angle        : NULL
+  ..$ lineheight   : NULL
+  ..$ margin       : NULL
+  ..$ debug        : NULL
+  ..$ inherit.blank: logi FALSE
+  ..- attr(*, "class")= chr [1:2] "element_text" "element"
+ - attr(*, "class")= chr [1:2] "theme" "gg"
+ - attr(*, "complete")= logi FALSE
+ - attr(*, "validate")= logi TRUE</code></pre>
+</div>
+</div>
+<p>The graph above shows as the number of people vaccinated increased the number of positive cases decreased. As noted previously this is not reflective off all COVID cases but only in respect to those tested.</p>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>The spike in negative results after vaccine rollout, and the subsequent overall decline in testing from 2023 onward, directly illustrates how immunization drives down both infection rates and demand for testing. Seeing tests peak in 2021—when capacity was ramped up—helps authorities plan for future surges.</p>
+</section>
+<section id="github-link" class="level2">
+<h2 class="anchored" data-anchor-id="github-link">GitHub Link</h2>
+<p><a href="https://github.com/vaphilip/Vphilip2025.git" class="uri">https://github.com/vaphilip/Vphilip2025.git</a></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
+<script>window.backupDefine = window.define; window.define = undefined;</script>
+<script type="text/javascript" src="quarto-preview.js"></script>
+<script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+<script type="text/javascript">
+  const options = {
+    origin: "",
+    search: "",
+    inputFile: "C:\Users\vikra\OneDrive\Documents\Vikram\Masters of Data Analytics and Policy\Programming and Data Management\Final Assignment PS4\Final Project PS4.qmd",
+    isPresentation: false
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    window.QuartoPreview.init(options);
+  });
+</script>
